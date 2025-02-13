@@ -24,3 +24,11 @@ Route::get('/route/hello', function () {
 Route::get('/view/hello', function () {
     return view('message.hello');
 });
+
+Route::get('/view/var', function () {
+    return view('message.var', ['variable' => 'Hello from web.php']);
+});
+
+Route::get('/view/word/{msg}', function ($msg) {
+    return view('message.word', ['msg' => $msg]);
+});
