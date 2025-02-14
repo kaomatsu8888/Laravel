@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,9 +36,16 @@ Route::get('/view/word/{msg}', function ($msg) {
     return view('message.word', ['msg' => $msg]);
 });
 // ビューを呼び出す(複数パラメータを渡す)
-Route::get('/view/word/{name}/{msg}', function($name, $msg) {
+Route::get('/view/word/{name}/{msg}', function ($name, $msg) {
     return view('message.word2', [
-        'name' => $name, 
+        'name' => $name,
         'msg' => $msg
     ]);
 });
+
+// Route::<HTTPメソッド>('<アドレス>', [<コントローラーのクラス, 'アクション名>']);
+Route::get('/controller/hello', [MessageController::class, 'hello']);
+
+Route::get('/controller/var', [MessageController::class, 'var']);
+
+Route::get('/controller/word/{msg}', [MessageController::class, 'word']);
