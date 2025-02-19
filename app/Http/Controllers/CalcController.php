@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-// extendsは継承してるよという意味
-class MessageController extends Controller
+class CalcController extends Controller
 {
-    public function hello()
+    public function addition()
     {
         return view('message.hello');
     }
@@ -27,7 +26,19 @@ class MessageController extends Controller
         return view('message.word2', [
             'name' => $name,
             'msg' => $msg
-            ]);
+        ]);
     }
-    
+    public function greeting($msg)
+    {
+        return view('message.greeting', ['msg' => $msg]);
+    }
+    public function beauty($msg)
+    {
+        if ($msg == 'yes') {
+            $result = 'Yes!高須クリニック';
+        } else {
+            $result = '湘南美容外科クリニック';
+        }
+        return view('message.beauty', ['result' => $result]);
+    }
 }

@@ -51,3 +51,7 @@ Route::get('/controller/var', [MessageController::class, 'var']);
 Route::get('/controller/word/{msg}', [MessageController::class, 'word']);
 
 Route::get('/controller/word/{name}/{msg}', [MessageController::class, 'word2']);
+
+// 課題
+Route::get('/calcs/{1111}/addition/{2222}',[CalcController::class, 'calcs']);
+
