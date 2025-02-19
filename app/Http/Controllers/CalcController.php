@@ -6,10 +6,6 @@ use Illuminate\Http\Request;
 
 class CalcController extends Controller
 {
-    public function addition()
-    {
-        return view('message.hello');
-    }
     public function var()
     {
         return view('message.var', ['variable' => 'Hello from MessageController']);
@@ -21,13 +17,19 @@ class CalcController extends Controller
         // ビューの世界ではmsgという変数で$msgを使える
         return view('message.word', ['msg' => $msg]);
     }
-    public function word2($name, $msg)
+    public function addition($var1, $var2)
     {
-        return view('message.word2', [
-            'name' => $name,
-            'msg' => $msg
-        ]);
+        $result = $var1 + $var2;
+        return view('calcs',['result' => $result]);
     }
+    public function subtraction($var1, $var2)
+    {
+        $result = $var1 - $var2;
+        return view('calcs',['result' => $result]);
+    }
+
+
+
     public function greeting($msg)
     {
         return view('message.greeting', ['msg' => $msg]);

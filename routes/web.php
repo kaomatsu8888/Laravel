@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\CalcController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,5 +54,8 @@ Route::get('/controller/word/{msg}', [MessageController::class, 'word']);
 Route::get('/controller/word/{name}/{msg}', [MessageController::class, 'word2']);
 
 // 課題
-Route::get('/calcs/{1111}/addition/{2222}',[CalcController::class, 'calcs']);
+// Route::<HTTPメソッド>('<アドレス>', [<コントローラーのクラス, 'アクション名>']);
+Route::get('/calc/{var1}/addition/{var2}',[CalcController::class, 'addition']);
+
+Route::get('/calc/{var1}/subtraction/{var2}', [CalcController::class, 'subtraction']);
 

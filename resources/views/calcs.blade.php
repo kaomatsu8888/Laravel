@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>計算アプリ</h1>
+    <h2>{{ $result }}</h2>
 </body>
 </html>
