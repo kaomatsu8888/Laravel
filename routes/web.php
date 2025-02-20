@@ -56,6 +56,6 @@ Route::get('/controller/word/{name}/{msg}', [MessageController::class, 'word2'])
 // 課題
 // Route::<HTTPメソッド>('<アドレス>', [<コントローラーのクラス, 'アクション名>']);
 Route::get('/calc/{var1}/addition/{var2}',[CalcController::class, 'addition']);
-
+// 引き算のルーティング
 Route::get('/calc/{var1}/subtraction/{var2}', [CalcController::class, 'subtraction']);
 
