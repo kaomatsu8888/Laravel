@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\CalcController;
+use App\Http\Controllers\CommentsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,4 +59,5 @@ Route::get('/controller/word/{name}/{msg}', [MessageController::class, 'word2'])
 Route::get('/calc/{var1}/addition/{var2}',[CalcController::class, 'addition']);
 // 引き算のルーティング
 Route::get('/calc/{var1}/subtraction/{var2}', [CalcController::class, 'subtraction']);
-
+// あいさつルーティング
+ROUTE::GET('/comments/{greeting}, [CommentsController::class, 'morning']);
