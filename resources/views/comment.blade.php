@@ -8,5 +8,13 @@
 </head>
 <body>
     <h1>{{ $greeting }}</h1>
+    <?php // なぜこのしたの部分は{{  }}がいらないのか ?>
+    @if ( $greeting  === '朝のあいさつ')
+        <p>おはようございます</p>
+    @elseif ($greetin == '')
+
+    @elseif ()
+
+    @endif
 </body>
 </html>
