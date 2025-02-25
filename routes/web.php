@@ -59,5 +59,18 @@ Route::get('/controller/word/{name}/{msg}', [MessageController::class, 'word2'])
 Route::get('/calc/{var1}/addition/{var2}',[CalcController::class, 'addition']);
 // 引き算のルーティング
 Route::get('/calc/{var1}/subtraction/{var2}', [CalcController::class, 'subtraction']);
-// 朝のあいさつルーティング
-ROUTE::GET('/comments/{greeting}', [CommentsController::class, 'morning']);
+
+
+// 課題間違いあいさつルーティング
+// ROUTE::GET('/comments/{morning}', [CommentsController::class, 'morning']);
+// 昼のあいさつルーティング
+// ROUTE::GET('/comments/{asternoon}', [CommentsController::class, 'afternoon']);
+// 夕方のあいさつルーティング
+// ROUTE::GET('/comments/{evening}', [CommentsController::class, 'evening']);
+// 夜のあいさつルーティング
+// ROUTE::GET('/comments/{nihgt}', [CommentsController::class, 'night']);
+
+ROUTE::GET('/comments/morning', [CommentsController::class, 'morning']);
+ROUTE::GET('/comments/afternoon', [CommentsController::class, 'afternoon']);
+ROUTE::GET('/comments/evening', [CommentsController::class, 'evening']);
+ROUTE::GET('/comments/night', [CommentsController::class, 'night']);

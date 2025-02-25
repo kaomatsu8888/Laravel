@@ -36,4 +36,16 @@ class CommentsController extends Controller
     {
         return view('comment', ['greeting' => '朝のあいさつ' ]);
     }
+    public function afternoon($greeting)
+    {
+        return view('comment', ['greeting' => '昼のあいさつ' ]);
+    }
+    public function evening($greeting)
+    {
+        return view('comment', ['greeting' => '夕方のあいさつ' ]);
+    }
+    public function night($greeting)
+    {
+        return view('comment', ['greeting' => '夜のあいさつ' ]);
+    }
 }

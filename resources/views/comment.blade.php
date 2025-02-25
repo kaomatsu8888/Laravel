@@ -8,13 +8,16 @@
 </head>
 <body>
     <h1>{{ $greeting }}</h1>
+    <?php var_dump($greeting); ?>
     <?php // なぜこのしたの部分は{{  }}がいらないのか ?>
     @if ( $greeting  === '朝のあいさつ')
         <p>おはようございます</p>
-    @elseif ($greetin == '')
-
-    @elseif ()
-
+    @elseif ($greeting === '昼のあいさつ')
+        <p>こんにちは
+    @elseif ($greeting === '夕方のあいさつ')
+        <p>こんばんは
+    @elseif ($greeting === '夜のあいさつ')
+        <p>おやすみ</p>
     @endif
 </body>
 </html>
