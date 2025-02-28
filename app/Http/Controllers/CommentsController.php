@@ -32,7 +32,7 @@ class CommentsController extends Controller
         return view('message.word', ['msg' => $msg]);
     }
 
-    public function morning($greeting)
+    public function morning()
     {
         return view('comment', ['greeting' => '朝のあいさつ' ]);
     }
