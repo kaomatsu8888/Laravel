@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 // extendsは継承してるよという意味
 class MessageController extends Controller
 {
+    // public function hogehoge($hensutest,$hensutest2)
+    public function hogehoge($username,$message) //変数の名前をかえてみる
+    {
+        return view('message.hogehoge',['hensutest' => $username,'hensutest2' => $message]);
+    }
+
     public function hello()
     {
         return view('message.hello');
