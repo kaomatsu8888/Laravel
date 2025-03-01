@@ -74,3 +74,6 @@ ROUTE::GET('/comments/morning', [CommentsController::class, 'morning']);
 ROUTE::GET('/comments/afternoon', [CommentsController::class, 'afternoon']);
 ROUTE::GET('/comments/evening', [CommentsController::class, 'evening']);
 ROUTE::GET('/comments/night', [CommentsController::class, 'night']);
+
+// 練習用ルーティング
+Route::get('/controller/test/{hensutest}', [MessageController::class, 'hogehoge']);
